@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Archivo';
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+/* Start of background circles style */
+/* .circle-overall-container{
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%; 
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #FFF4F6;
+    overflow: hidden;
+}
+
+.outer-circle {
+    width: 135vmin;
+    height: 135vmin;
+}
+
+.middle-circle {
+    width: 110vmin;
+    height: 110vmin;
+}
+
+.inner-circle {
+    width: 80vmin; 
+    height: 80vmin;
+} */
+
+
+/* End of Background Circle Style */
+
+/* Start of Header Style */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100px;
+    z-index: 40;
+}
+
+header .logo-container {
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header img {
+    width: 187px;
+    height: 36px;
+}
+
+/* End of header style */
+
+
+
+/* Start of Body Style */
+.body-container {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    padding-top: 120px;
+    flex: 1;
+}
+
+.body-container .body-container-inner {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.body-container .body-container-inner h1 {
+    font-size: 4.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.animated-paragraph {
+    position: relative;
+    margin-top: 15px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.body-container .body-container-inner h3 {
+    font-size: 4.2rem;
+    color: #750015;
+}
+
+.word {
+    display: none;
+}
+
+.visible {
+    display: inline;
+}
+
+.body-container .body-container-inner p {
+    font-size: 27px;
+    margin-top: 30px;
+    color: #000;
+}
+
+/* Container for the input and button */
+.input-container {
+    position: relative;
+    width: 70%;
+    margin: 35px auto;
+}
+
+/* Text input */
+.text-input {
+    width: 100%;
+    padding: 40px 10px 40px 10px;
+    font-size: 1.6rem;
+    background: #FFDBE2;
+    border: none;
+    color: #B0B0B0;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Submit button inside the input */
+.submit-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 25px 20px;
+    background-color: #750015;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+/* Submit button hover effect */
+.submit-button:hover {
+    background-color: #750015;
+}
+
+
+
+/* Style of flexed images */
+.images {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 200px;
+    background-color: transparent;
+}
+
+.images .image {
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    border: 5px solid #750015;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.images .image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Background images for each circle */
+
+.images .start img {
+    height: 100%;
+}
+
+.images .middle {
+    margin-top: 200px;
+    border: 5px solid #FFDBE2;
+}
+
+footer {
+    background-color: transparent;
+    color: #000;
+    text-align: left;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    padding-left: 60px;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* End of Body Style */
+
+
+
+
+/* Media queries */
+
+@media (max-width: 1280px) {
+    .body-container .body-container-inner {
+        width: 85%;
+    }
+
+    .body-container .body-container-inner h1 {
+        font-size: 3.5rem;
+    }
+
+    .body-container .body-container-inner h1 {
+        font-size: 3.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .body-container .body-container-inner h3 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .input-container {
+        position: relative;
+        width: 90%;
+        margin: 35px auto;
+    }
+
+    .body-container .body-container-inner p {
+        font-size: 20px;
+    }
+
+    /* .outer-circle {
+        width: 100vmin;
+        height: 100vmin;
+    }
+    
+    .middle-circle {
+        width: 80vmin;
+        height: 80vmin; 
+    }
+    
+    .inner-circle {
+        width: 70vmin;
+        height: 70vmin;
+    } */
+}
+
+
+@media (max-width: 750px) {
+    .body-container .body-container-inner {
+        width: 95%;
+    }
+
+    .body-container .body-container-inner h1 {
+        font-size: 2.5rem;
+    }
+
+    .body-container .body-container-inner h3 {
+        font-size: 2.5rem;
+    }
+
+    .outer-circle {
+        width: 80vmin;
+        height: 80vmin;
+    }
+
+    .middle-circle {
+        width: 60vmin;
+        height: 60vmin;
+    }
+
+    .inner-circle {
+        width: 40vmin;
+        height: 40vmin;
+    }
+}
+
+@media (max-width: 580px) {
+    header img {
+        width: 157px;
+        height: 30px;
+    }
+
+    .body-container .body-container-inner h1 {
+        font-size: 2rem;
+    }
+
+    .body-container .body-container-inner h3 {
+        font-size: 2rem;
+    }
+
+    .images .middle {
+        margin-top: 100px;
+    }
+
+    .images {
+        margin-bottom: 100px;
+    }
+
+    .text-input {
+        font-size: 0.8rem;
+        padding: 25px 5px;
+    }
+
+    .submit-button {
+        padding: 10px 10px;
+        font-size: 1rem;
+    }
+
+    .body-container .body-container-inner p {
+        font-size: 18px;
+    }
+
+    .circle {
+        border: 3px solid #FFDBE2;
+    }
+}
+
+@media (max-width: 450px) {
+    .body-container .body-container-inner h1 {
+        font-size: 1.5rem;
+    }
+
+    .body-container .body-container-inner h3 {
+        font-size: 1.5rem;
+    }
+
+    .images .image {
+        border-width: 3px;
+    }
+
+    footer {
+        padding-left: 20px;
+        font-size: 1rem;
+    }
+
+    .images .middle {
+        margin-top: 80px;
+    }
+}
