@@ -327,7 +327,8 @@ footer {
     
 
     .body-container .body-container-inner h1 {
-        font-size: 1.7rem;
+        width: 80%;
+        font-size: 1.35rem;
     }
 
     .body-container .body-container-inner h3 {
@@ -354,4 +355,10 @@ footer {
         font-size: 1rem;
     }
 
+}
+
+@media (max-width: 390px) {
+    .body-container .body-container-inner h1 {
+        width: 90%;
+    }
 }
