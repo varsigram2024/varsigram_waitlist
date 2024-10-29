@@ -1,35 +1,3 @@
-// const words = document.querySelectorAll('.word');
-//         let currentIndex = 0;
-
-//         function showWord(index) {
-//             // Hide all words
-//             words.forEach(word => {
-//                 word.classList.remove('visible');
-//             });
-//             // Show the current word
-//             words[index].classList.add('visible');
-
-//             // Move to the right if it's not the first word
-//             const translateX = index * 10; // 10px for each word
-//             document.querySelector('.animated-paragraph').style.transform = `translateX(${translateX}px)`;
-//         }
-
-//         function animateWords() {
-//             showWord(currentIndex);
-//             currentIndex++;
-
-//             // Reset index if it exceeds the number of words
-//             if (currentIndex >= words.length) {
-//                 currentIndex = 0; // Reset to the first word
-//             }
-//         }
-
-//         // Start the animation and change words every 2 seconds
-//         setInterval(animateWords, 2500);
-
-
-
-
 const texts = ["talent showcase opportunities", "centralized communication", "networking opportunities"];
 let index = 0;
 let charIndex = 0;
@@ -72,6 +40,46 @@ function eraseText() {
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(typeText, 1000);  // Start typing after a brief delay
 });
+
+
+
+// Waitlist form
+document.getElementById("waitlistForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    const submitButton = document.getElementById("submitButton");
+    const formData = new FormData(this);
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxFJo6iuHM3YRPeVmVQjBHj6hI9QmVv9J5yj8rqMYcGPehNU3WlaxSxjNnVkJay2SNdqg/exec"; // Replace with your Apps Script Web App URL
+
+    // Change button text to "Loading..."
+    submitButton.disabled = true;
+    submitButton.textContent = "Loading...";
+
+    fetch(scriptURL, { method: "POST", body: formData })
+        .then(response => {
+            if (response.ok) {
+                showSuccessMessage(); // Show success message
+            } else {
+                alert("There was a problem submitting the form. Please try again.");
+            }
+        })
+        .catch(error => console.error("Error!", error.message))
+        .finally(() => {
+            // Revert button text after submission completes
+            submitButton.disabled = false;
+            submitButton.textContent = "Submit";
+        });
+});
+
+function showSuccessMessage() {
+    const successMessage = document.getElementById("successMessage");
+    successMessage.style.display = "block"; // Show the success message
+
+    // Hide the success message after a few seconds
+    setTimeout(() => {
+        successMessage.style.display = "none";
+    }, 3000); // Adjust time as needed (3000ms = 3 seconds)
+}
 
 
 

@@ -10,6 +10,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/VARSIGRAM PLAIN LOGO.png" type="image/png">
     <title>Varsigram Waitlist</title>
+
+
+
+
+    <style>
+        /* Success message styling */
+        #successMessage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: -100px; /* Start hidden above viewport */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white; /* Changed to white */
+            color: #750015; /* Text color */
+            padding: 15px 30px;
+            border-radius: 8px; /* Rounded corners */
+            font-size: 1.1rem;
+            font-weight: bold;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced box shadow */
+            animation: slideDown 0.5s ease forwards;
+            z-index: 1000;
+        }
+        
+        /* Success icon styling */
+        #successMessage .icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #28a745; /* Green color for the check icon */
+        }
+        
+        /* Slide-down animation */
+        @keyframes slideDown {
+            from {
+                top: -100px;
+                opacity: 0;
+            }
+            to {
+                top: 20px; /* Adjust the final position */
+                opacity: 1;
+            }
+        }
+        
+        /* Slide-up animation */
+        @keyframes slideUp {
+            from {
+                top: 20px;
+                opacity: 1;
+            }
+            to {
+                top: -100px;
+                opacity: 0;
+            }
+        }
+        </style>
+        
+
 </head>
 
 <body>
@@ -23,8 +81,16 @@
 
 
 
+
     <div class="body-container">
         <div class="body-container-inner">
+            <div id="successMessage" style="display: none;">
+                <span class="icon">✔️</span>
+                <span>Thank you for joining the waitlist!</span>
+            </div>
+
+
+
             <div class="text-info">
                 <h1>
                     Building a dynamic platform for
@@ -44,12 +110,15 @@
                 </p>
             </div>
 
-            <form action="" method="post">
+            <form id="waitlistForm">
                 <div class="input-container">
-                    <input type="text" placeholder="myemail@gmail.com" class="text-input" id="email">
-                    <button type="submit" class="submit-button">Submit</button>
+                    <input type="email" placeholder="myemail@gmail.com" class="text-input" id="email" name="email"
+                        required>
+                    <button type="submit" id="submitButton" class="submit-button">Submit</button>
                 </div>
             </form>
+
+
 
             <div class="images">
                 <div class="image start">
