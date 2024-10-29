@@ -21,16 +21,16 @@
             align-items: center;
             justify-content: center;
             position: fixed;
-            top: -100px; /* Start hidden above viewport */
+            top: -100px; 
             left: 50%;
             transform: translateX(-50%);
-            background-color: white; /* Changed to white */
-            color: #750015; /* Text color */
+            background-color: white; 
+            color: #750015; 
             padding: 15px 30px;
-            border-radius: 8px; /* Rounded corners */
+            border-radius: 8px; 
             font-size: 1.1rem;
             font-weight: bold;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced box shadow */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
             animation: slideDown 0.5s ease forwards;
             z-index: 1000;
         }
@@ -39,7 +39,7 @@
         #successMessage .icon {
             font-size: 1.5rem;
             margin-right: 10px;
-            color: #28a745; /* Green color for the check icon */
+            color: #28a745; 
         }
         
         /* Slide-down animation */
@@ -65,6 +65,20 @@
                 opacity: 0;
             }
         }
+
+        @media (max-width: 720px) {
+            #successMessage {
+                width: 60%;
+                padding: 15px 0 15px 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #successMessage {
+                width: 80%;
+                font-size: 0.8rem;
+            }
+        }
         </style>
         
 
@@ -83,13 +97,14 @@
 
 
     <div class="body-container">
+        <div id="successMessage" style="display: none;">
+            <span class="icon">✔️</span>
+            <span>Thank you for joining the waitlist!</span>
+        </div>
+
+
         <div class="body-container-inner">
-            <div id="successMessage" style="display: none;">
-                <span class="icon">✔️</span>
-                <span>Thank you for joining the waitlist!</span>
-            </div>
-
-
+           
 
             <div class="text-info">
                 <h1>
@@ -114,7 +129,7 @@
                 <div class="input-container">
                     <input type="email" placeholder="myemail@gmail.com" class="text-input" id="email" name="email"
                         required>
-                    <button type="submit" id="submitButton" class="submit-button">Submit</button>
+                    <button type="submit" id="submitButton" class="submit-button"></button>
                 </div>
             </form>
 
