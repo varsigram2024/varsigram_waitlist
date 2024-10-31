@@ -372,4 +372,8 @@ footer {
     .body-container .body-container-inner h1 {
         width: 90%;
     }
+
+    .text-input {
+        font-size: 0.7rem;
+    }
 }
