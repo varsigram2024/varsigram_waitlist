@@ -235,6 +235,16 @@ footer {
 
 /* Media queries */
 
+@media (min-width: 1200px) {
+    .body-container .body-container-inner h1 {
+        width: 800px;
+    }
+
+    .body-container .body-container-inner p {
+       width: 850px;
+    }
+  }
+
 @media (max-width: 1400px) {
     .body-container .body-container-inner h1 {
         width: 80%;
