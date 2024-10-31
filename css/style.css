@@ -80,8 +80,8 @@ header img {
 }
 
 .body-container .body-container-inner h3 {
-    font-size: 2.5rem;
-    color: #750015
+    font-size: 3rem;
+    color: #750015;
 }
 
 .word {
@@ -230,6 +230,7 @@ footer {
     animation: blink 1s step-end infinite;
     position: relative;
     left: -2px;
+
 }
 
 /* Media queries */
@@ -288,6 +289,7 @@ footer {
 @media (max-width: 755px) {
     .body-container .body-container-inner h1 {
         font-size: 2.2rem;
+        margin-bottom: -3px;
     }
 
     .text-input {
@@ -301,11 +303,13 @@ footer {
     }
 
     .body-container .body-container-inner h3 {
-        font-size: 2.1rem;
+        font-size: 2.2rem;
+
     }
 
     .body-container .body-container-inner p {
         width: 79%;
+        margin-top: 10px;
     }
 
     .images .image{
@@ -324,7 +328,6 @@ footer {
         padding-top: 110px;      
     }
     
-
     .body-container .body-container-inner h1 {
         width: 80%;
         font-size: 1.35rem;
@@ -332,11 +335,20 @@ footer {
 
     .body-container .body-container-inner h3 {
         font-size: 1.35rem;
+        font-weight: 700;
+        margin-top: -25px;
     }
+
+    .caret {
+        font-size: 35px;
+        top: -13px;
+    }
+    
 
     .body-container .body-container-inner p {
         width: 100%;
         font-size: 17px;
+        margin-top: -12px;
     }
 
     .images .image{
